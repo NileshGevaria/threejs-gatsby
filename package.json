@@ -1,0 +1,25 @@
+{
+  "name": "threejswebsite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "threejswebsite",
+  "author": "‘nilesh’",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "gatsby": "^5.8.1",
+    "gatsby-plugin-react-helmet": "^6.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0"
+  }
+}

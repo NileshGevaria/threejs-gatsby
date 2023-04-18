@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import 'variable';
+@import 'mixin';
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: $blue;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.headerCustom {
+    padding: 10px 0;
+    background: transparent !important;
+    .navbar-nav {
+        a {
+            @include font(14px, $white, 400);
+            margin: 0 0 0 50px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            &.active,
+            &:hover {
+                background: $primaryText;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    border-bottom: solid 2px rgba(255,31,36,1);
+                    width: 25px;
+                    height: 2px;
+                }
+            }
+        }
+        .icWhatsApp:hover {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+.scrolled {
+    background: rgba($blue, .7) !important;
+    backdrop-filter: blur(3px);
+}
+.containerHeader {
+    padding: 0 100px;
+}
+
+.containerCustom {
+    padding: 0 100px;
+}
+.link16White {
+    @include font(16px, $white, 400);
+    text-decoration: none;
+    &:hover {
+        color: rgba(255,31,36,1);
+    }
+}
+.font70 {
+    font-family: 'Playfair Display', serif;
+    @include font(70px, $white, 800);
+    background: $primaryText;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: -1px;
+    span {
+        color: $white;
+        background: transparent;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: currentColor;
+        background-clip: unset;
+        text-fill-color: unset;
+    }
+}
+.font50 {
+    font-family: 'Playfair Display', serif;
+    @include font(50px, $white, 800);
+    background: $primaryText;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: -1px;
+    span {
+        color: $white;
+        background: transparent;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: currentColor;
+        background-clip: unset;
+        text-fill-color: unset;
+    }
+}
+.font50 {
+    font-family: 'Playfair Display', serif;
+    @include font(50px, $white, 800);
+    background: $primaryText;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: -1px;
+    span {
+        color: $white;
+        background: transparent;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: currentColor;
+        background-clip: unset;
+        text-fill-color: unset;
+    }
+}
+
+.font32White {
+    @include font(32px, $white, 400);
+}
+.font26Blue {
+    @include font(26px, $blue, 500);
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.font20Blue {
+    @include font(20px, $blue, 500);
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.font16Black {
+    @include font(16px, $black, 400);
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+.font14Black {
+    @include font(14px, $black, 400);
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+.font24Medium {
+    @include font(26px, $white, 400);
+}
+p {
+    @include font(18px, $white, 300);
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.font16Bold {
+    @include font(16px, $white, 600);
+}
+
+.font16 {
+    @include font(16px, $white, 400);
+}
+.fontBold {
+    font-weight: 600;
+}
+ul.list,
+ol.list {
+    padding: 0;
+    list-style-position: outside;
+    padding-left: 20px;
+    li {
+        @include font(18px, $white, 300);
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+}
+
+.btnPrimary {
+    background-color: $white;
+    @include font(24px, $blue, 500);
+    border: solid 1px $white;
+    border-radius: 50px;
+    padding: 10px 50px;
+    &:hover,
+    &:focus,
+    &:focus-visible &:first-child:active {
+        background-color: rgba($white, .9);
+    }
+}
+.btnSecondary {
+    background-color: $blue;
+    @include font(24px, $white, 400);
+    border: solid 1px $white;
+    border-radius: 50px;
+    padding: 10px 50px;
+    &:hover,
+    &:focus,
+    &:focus-visible &:first-child:active {
+        background-color: rgba($blue, .9);
+        color: $white;
+    }
+}
+.sectionHeight {
+    min-height: calc(100vh - 137px);
+}
+.homePage {
+    min-height: 100vh;
+    padding-top: 137px;
+    display: flex;
+    align-items: center;
+}
+.whiteBox {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+    width: 100%;
+}
+.blogBox {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 15px;
+    height: 100%;
+}
+.particlehead {
+    // min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+// .particlehead canvas {
+//     width: 100% !important;
+//     height: 100% !important;
+// }
+.aboutusPage {
+    min-height: 100vh;
+    padding-top: 137px;
+    display: flex;
+    align-items: center;
+}
+.aboutUp {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    z-index: 9;
+}
+.aboutDown {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 8;
+}
+
+.servicesPage {
+    min-height: 100vh;
+    padding-top: 137px;
+}
+
+.contactPage {
+    min-height: 100vh;
+    padding-top: 137px;
+    display: flex;
+    align-items: center;
+}
+
+.inputCustom {
+    background-color: rgba(255, 255, 255, .2);
+    border: 0;
+    border-radius: 20px;
+    padding: 20px 25px;
+    @include font(14px, $white, 400);
+
+    &::placeholder {
+        @include font(14px, $white, 400);
+    }
+
+    &:focus {
+        background-color: rgba(255, 255, 255, .2);
+        @include font(14px, $white, 400);
+    }
+}
+
+.site{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #202020;
+}
+
+.footer {
+    margin-top: 30px;
+    padding: 30px 0;
+
+    &.footer-line {
+        border-top: 1px solid #424273;
+    }
+
+    .font14White {
+        @include font(14px, $white, 200);
+        line-height: unset;
+    }
+
+    .font18Red {
+        @include font(18px, $white, 600);
+        background: $primaryText;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    .navigationItems {
+        ul {
+            padding: 0;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    @include font(14px, $white, 200);
+                    text-decoration: none;
+
+                    &:hover {
+                        color: rgba($white, .5);
+
+                        svg path {
+                            fill: rgba($white, .5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.ServcieSlider {
+    .splide__arrow--prev {
+        left: -40px;
+    }
+    .splide__arrow--next {
+        right: -40px;
+    }
+}
+.customBadge {
+    background-color: #3d3d83;
+    @include font(13px, $white, 400);
+}
+.customAccordion {
+    .accordion-item {
+        border: 0;
+        background: $white;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        .accordion-header {
+            .accordion-button {
+                @include font(24px, $blue, 200);
+                border-radius: 10px;
+                padding: 20px;
+            }
+        }
+        .accordion-body {
+            @include font(18px, $black, 200);
+            padding: 20px;
+        }
+    }
+}
+
+
+// Responsive css start
+@media (min-width: 280px) {
+
+    .font70 {
+        font-size: calc(1.875rem + ((1vw - 3.2px) * 2.5));
+        min-height: 0vw;
+    }
+
+    .font50 {
+        // font-size: calc(1.875rem + ((1vw - 3.2px) * 2.5));
+        font-size: calc(1.25rem + ((1vw - 3.2px) * 1.875));
+        min-height: 0vw;
+    }
+
+    .font24Medium,
+    .font26Blue {
+        font-size: calc(1.25rem + ((1vw - 3.2px) * 0.375));
+        min-height: 0vw;
+    }
+
+    p,
+    .font16Black {
+        font-size: calc(1rem + ((1vw - 3.2px) * 0.125));
+        min-height: 0vw;
+    }
+
+    ul.list li,
+    ol.list li {
+        font-size: calc(0.875rem + ((1vw - 3.2px) * 0.25));
+        min-height: 0vw;
+    }
+}
+
+@media (max-width: 1440px) {
+
+    .containerCustom,
+    .containerHeader {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .headerCustom .navbar-nav {
+        padding: 10px;
+        a {
+            margin: 0 0 20px 0;
+            padding: 5px 0;
+            color: $blue;
+        }
+    }
+
+    .containerCustom,
+    .containerHeader {
+        padding: 0 20px;
+    }
+
+    .navbar-toggler {
+        background-color: $white;
+    }
+
+    .navbar-collapse {
+        background-color: $white;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .headerCustom .navbar-nav .nav-link {
+        color: $black;
+    }
+
+    .navbar-brand img {
+        width: 200px;
+    }
+
+    .headerCustom .navbar-nav .nav-item {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .headerCustom .navbar-nav .nav-item .nav-link {
+        color: $blue;
+        font-size: 20px;
+    }
+
+    .particlehead canvas {
+        width: 100% !important;
+        height: 100vh !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        width: 150px;
+    }
+
+    .headerCustom .navbar-nav a {
+        font-size: 20px;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        padding: 10px 30px;
+        font-size: 20px;
+    }
+
+    p {
+        line-height: unset;
+    }
+}
