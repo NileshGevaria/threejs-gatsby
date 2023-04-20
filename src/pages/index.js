@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/scss/style.css";
 import { Container, Row, Col, Button, Form, Nav, Navbar, Badge, Accordion } from 'react-bootstrap';
@@ -6,7 +6,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import {Helmet} from "react-helmet";
 import { withPrefix } from "gatsby"
-import threeBanner from "../assets/images/threeBanner.webp";
+import { Experience } from "../components/Experience";
+import { Canvas } from "@react-three/fiber";
+
 
 
 const IndexPage = () => {
@@ -31,17 +33,10 @@ const IndexPage = () => {
                 </p>
               </div>
             </Col>
-            <Col md={12} lg={5} className="text-center">
-              <div><img src={threeBanner} className="img-fluid" /></div>
-              {/* <div id="particlehead" className="particlehead" style={{ zIndex: 999, marginLeft: "-700px" }}></div> */}
-              {/* <Helmet>
-                <script src={withPrefix('modernizr.min.js')} async></script>
-                <script src={withPrefix('jquery.min.js')} async></script>
-                <script src={withPrefix('three.min.js')} async></script>
-                <script src={withPrefix('TweenMax.min.js')} async></script>
-                <script src={withPrefix('OBJLoader.js')} async></script>
-                <script src={withPrefix('objHead.js')} async></script>
-              </Helmet> */}
+            <Col md={12} lg={7} className="text-center">
+              <Canvas className="modalHeight">
+                <Experience  />
+              </Canvas>
             </Col>
           </Row>
         </section>
@@ -294,9 +289,11 @@ export function Head() {
   return (
     <>
       <html lang="en" />
+      <link rel="icon" href="../assets/images/favicon.ico" />
       <title>Hire Three.js Developers – ThreeJSDevelopers</title>
       <meta name="description" content="ThreeJSDevelopers is your best option to hire top three.js developers or a dedicated team on an hourly, monthly, or full-time basis." />
-      <meta name="google-site-verification" content="aFnLVIa5d6C-WBtUP7WvtqPhLV7JELYTeSVEJ180iqU" />
+      {/* <meta name="google-site-verification" content="aFnLVIa5d6C-WBtUP7WvtqPhLV7JELYTeSVEJ180iqU" /> */}
+      <meta name="google-site-verification" content="qlaTwHumQoxxppm5qeqCrDJp4_8X6Si_SCN1kQeQs44" />
       <link rel="canonical" href="https://www.threejsdevelopers.com/" />
       <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
       {/* <script src='../assets/js/modernizr.min.js' async></script>

@@ -236,6 +236,7 @@ ol.list li {
 .btnPrimary:hover, .btnPrimary:focus,
 .btnPrimary:focus-visible .btnPrimary:first-child:active {
   background-color: rgba(255, 255, 255, 0.9);
+  border: solid 1px #fff;
 }
 
 .btnSecondary {
@@ -252,6 +253,7 @@ ol.list li {
 .btnSecondary:focus-visible .btnSecondary:first-child:active {
   background-color: rgba(6, 6, 72, 0.9);
   color: #fff;
+  border: solid 1px #fff;
 }
 
 .sectionHeight {
@@ -293,9 +295,8 @@ ol.list li {
           align-items: center;
 }
 
-.particlehead canvas {
-  width: 100vw;
-  /* height: 100vh; */
+.modalHeight {
+  height: 80vh !important;
 }
 
 .aboutusPage {
@@ -475,6 +476,17 @@ ol.list li {
   padding: 20px;
 }
 
+.backToTopBtn {
+  background: #3d3d83;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+}
+
 @media (min-width: 280px) {
   .font70 {
     font-size: calc(1.875rem + ((1vw - 3.2px) * 2.5));
@@ -546,6 +558,24 @@ ol.list li {
   .particlehead canvas {
     width: 100% !important;
     height: 100vh !important;
+  }
+  .ServcieSlider .splide__arrow--prev {
+    left: -10px;
+  }
+  .ServcieSlider .splide__arrow--next {
+    right: -10px;
+  }
+  .customAccordion .accordion-item .accordion-header .accordion-button {
+    font-size: 18px;
+  }
+  .customAccordion .accordion-item .accordion-body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .modalHeight {
+    height: 40vh !important;
   }
 }
 

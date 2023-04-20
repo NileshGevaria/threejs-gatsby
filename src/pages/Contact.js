@@ -2,7 +2,8 @@ import * as React from "react"
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import Header from "./Header";
 import Footer from "./Footer";
-// import { Helmet } from "react-helmet";
+import {Helmet} from "react-helmet";
+import { withPrefix } from "gatsby"
 
 const Contact = () => {
 
@@ -32,15 +33,15 @@ const Contact = () => {
                             </div>
                         </Col>
                         <Col md={12} lg={6} className="d-flex align-items-center mb-5 mb-lg-0">
-                            <div className='bgn-wf-wrapper' id='BiginWebToEntityFormDiv267113000000569107'>
-                                <form id='BiginWebToContactForm267113000000569107'
-                                    name='BiginWebToContactForm267113000000569107' method='POST' enctype='multipart/form- data' onSubmit='javascript:document.charset="UTF-8"; return validateForm267113000000569107()' accept-charset='UTF-8'>
+                            <div className='bgn-wf-wrapper' id='BiginWebToEntityFormDiv267113000000641002'>
+                                <form id='BiginWebToContactForm267113000000641002'
+                                    name='BiginWebToContactForm267113000000641002' method='POST' enctype='multipart/form-data' onSubmit='javascript:document.charset="UTF-8"; return validateForm267113000000641002()' accept-charset='UTF-8'>
                                     <input type='text' style={{ display: "none" }} name='xnQsjsdp' value='3fef1381d1076883454f9b8f5f77f1082ac431ee9953419b387a64de1fb423bc' />
-                                    <input type='hidden' name='zc_gad' id='zc_gad' value='' />
-                                    <input type='text' style={{ display: "none" }} name='xmIwtLD' value='e9cfc25d3a0c3f38a426576bf61dd1def95d0d5b2437a4b9e9f1e8dafd7600fd' />
+                                    <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+                                    <input type='text' style={{ display: "none" }} name='xmIwtLD' value='e9cfc25d3a0c3f38a426576bf61dd1dec194f38aa78a88e02b207818d560a360' />
                                     <input type='text' style={{ display: "none" }} name='actionType' value='Q29udGFjdHM=' />
                                     <input type='text' style={{ display: "none" }} name='returnURL' value='https://threejsdevelopers.com' />
-                                    <div className='row' id="elementDiv267113000000569107">
+                                    <div className='row' id="elementDiv267113000000641002">
                                         <div className="col-md-12 col-lg-12 col-xl-12 col-xxl-6 bgn-wf-row mb-3">
                                             <div className="bgn-wf-field">
                                                 <input name="First Name" className='inputCustom w-100' type="text" maxlength="40" placeholder="First Name *" />
@@ -68,11 +69,19 @@ const Contact = () => {
                                         </div>
                                         <div className="col-md-12 col-lg-12 bgn-wf-row">
                                             <div className="bgn-wf-field">
-                                                <Button variant="" className='btnPrimary me-3' id='formsubmit267113000000569107' type='submit' value='Submit'>Submit</Button>
-                                                <Button variant="" className='btnSecondary' onclick='disableSubmitwhileReset267113000000569107()' type='reset' value='Reset'>Reset</Button>
+                                                {/* <Button variant="" className='btnPrimary me-3' id='formsubmit267113000000569107' type='submit' value='Submit'>Submit</Button>
+                                                <Button variant="" className='btnSecondary' onclick='disableSubmitwhileReset267113000000569107()' type='reset' value='Reset'>Reset</Button> */}
+
+                                                <Button variant="" id='formsubmit267113000000641002' type='submit' value='Submit' className="btnPrimary">Submit</Button>
+                                                <Button variant="" onclick='formsubmit267113000000641002' type='reset'  value='Reset' className="btnSecondary ms-3">Reset</Button>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <Helmet>
+                                        <script src={withPrefix('contactForm.js')} async></script>
+                                        <script src={withPrefix('WebformScriptServlet.js')} async></script>
+                                    </Helmet>
 
                                     {/* <Helmet>
                                         <script src='FormScript.js'></script>
@@ -106,8 +115,8 @@ export function Head() {
         <meta name="description" content="Contact Threejsdevelopers.com for all type of Threejs professional services." />
         <link rel="canonical" href="https://www.threejsdevelopers.com/Contact" />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-        <script src='js/FormScript.js'></script>
-        <script id='wf_script' src='js/WebformScriptServlet.js'></script>
+        {/* <script src='js/FormScript.js'></script>
+        <script id='wf_script' src='js/WebformScriptServlet.js'></script> */}
       </>
     )
   }

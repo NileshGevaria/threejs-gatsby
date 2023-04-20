@@ -8,7 +8,7 @@ const Footer = () => {
 
     
         return (
-            <div className="footer footer-line">
+            <div className="footer footer-line position-relative">
                 <Container fluid className='containerCustom'>
                     <Row className="justify-content-between">
                         <Col md={6} lg={3} sm={12}>
@@ -62,6 +62,12 @@ const Footer = () => {
                         </Col>
                     </Row>
                 </Container>
+
+                <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="backToTopBtn">
+                <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.0695 9.99998C16.803 9.99909 16.5477 9.89361 16.3588 9.70674L9.02497 2.41483L1.6911 9.70674C1.43447 9.94449 1.0716 10.0321 0.733884 9.93779C0.396155 9.84361 0.132196 9.58117 0.0374632 9.24536C-0.0574079 8.90956 0.0307299 8.54877 0.269849 8.29362L8.31431 0.295181C8.50196 0.106379 8.75799 0 9.02495 0C9.29191 0 9.54791 0.106379 9.73558 0.295181L17.78 8.29362C17.9699 8.48019 18.0769 8.73475 18.0769 9.00019C18.0769 9.26562 17.9699 9.52016 17.78 9.70675C17.5912 9.89362 17.3359 9.99911 17.0694 10L17.0695 9.99998Z" fill="white"/>
+                </svg>
+                </button>
             </div>
         );
     
