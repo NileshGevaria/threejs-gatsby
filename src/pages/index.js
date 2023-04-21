@@ -23,7 +23,7 @@ const IndexPage = () => {
             <Col md={12} lg={5} className="d-flex align-items-center mb-5 mb-lg-0">
               <div>
                 <h1 className='font70 mb-3 position-relative'>
-                  <span>Confidently Hire</span><br />Three.JS developers
+                  <span>Confidently</span><br />Hire Three.JS developers
                 </h1>
                 <p className='mb-5 font24Medium'>
                   Hire top Three.js developers that can meet your vision of delivering outstanding gaming experiences!
@@ -68,7 +68,7 @@ const IndexPage = () => {
 
         <section className='homePage'>
           <Col md={12} lg={12} className="mb-5 mb-lg-0">
-            <h3 className='font50 mb-3'><span>The Expertise of Our Top </span><br />Three.js Developers</h3>
+            <h3 className='font50 mb-3'><span>The Expertise of Our </span><br />Top Three.js Developers</h3>
             <Row>
               <Col sm={12} md={6} lg={4} className="mb-4">
                 <div className='whiteBox'>
@@ -146,7 +146,7 @@ const IndexPage = () => {
         <section className='homePage row justify-content-between'>
           <Col md={12} lg={6} className="d-flex align-items-start mb-5 mb-lg-0">
             <div>
-              <h2 className='font50 mb-3'><span>Advantages of Hiring</span><br />Our Dedicated Three.js<br /><span>Expert</span></h2>
+              <h2 className='font50 mb-3'><span>Advantages of Hiring</span><br />Our Three.js Expert<br /></h2>
             </div>
           </Col>
           <Col md={12} lg={5} className="d-flex align-items-end mb-5 mb-lg-0">
@@ -171,7 +171,7 @@ const IndexPage = () => {
         <section className='homePage row justify-content-between'>
           <Col md={12} lg={6} className="d-flex align-items-start mb-5 mb-lg-0">
             <div>
-              <h2 className='font50 mb-3'><span>How to Hire</span><br />Three.js Developers?</h2>
+              <h2 className='font50 mb-3'><span>How to</span><br />Hire Three.js Developers?</h2>
               <ol className='list'>
                 <li><span className='fontBold'>Contact us and requirement analysis:</span> Get in touch with us to discuss your project requirements and how we can help.
                 </li>
@@ -237,7 +237,7 @@ const IndexPage = () => {
 
         <section className='homePage row justify-content-between'>
           <div>
-            <h2 className='font50 mb-3'><span>FAQ</span><br />Frequently Asked Questions</h2>
+            <h2 className='font50 mb-3'><span>FAQS</span></h2>
             <Accordion defaultActiveKey="0" className="customAccordion">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>What makes our Three.js developers unique?</Accordion.Header>

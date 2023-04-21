@@ -17,7 +17,7 @@ const Header = () => {
                             <Link to={"/"} activeClassName="active">Home</Link>
                             <Link to={"/AboutUs"} activeClassName="active">About Us</Link>
                             <Link to={"/Services"} activeClassName="active">Services</Link>
-                            {/* <Link to={"https://www.threejsdevelopers.com/blogs"} activeClassName="active">Blogs</Link> */}
+                            <Link to={"https://www.threejsdevelopers.com/blogs"} activeClassName="active">Blogs</Link>
                             <Link to={"/Contact"} activeClassName="active">Contact Us</Link>
                             <a href='https://wa.me/+919429005987' target="_blank" className='icWhatsApp'>
                                 <img src={icWhatsApp} style={{width:"30px"}} />

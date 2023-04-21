@@ -5,7 +5,8 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 export function Experience () {
   const ref = React.useRef()
-  const gltf = useLoader(GLTFLoader, 'model/a_windy_day.glb')
+  // const gltf = useLoader(GLTFLoader, 'model/a_windy_day.glb')
+  const gltf = useLoader(GLTFLoader, 'model/planet_earth.glb')
   useFrame(() => {
     if(ref.current) {
       ref.current.rotation.y += 0.001
@@ -38,6 +39,7 @@ export function Experience () {
 
     return (
      <>
+     <ambientLight intensity={4}/>
        <OrbitControls enableZoom={false} enablePan={false} position={[0,0,0]} />
         <mesh ref={ref}>
          <primitive object={gltf.scene} scale={scale} />

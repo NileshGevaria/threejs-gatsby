@@ -380,7 +380,8 @@ ol.list {
 @media (min-width: 280px) {
 
     .font70 {
-        font-size: calc(1.875rem + ((1vw - 3.2px) * 2.5));
+        // font-size: calc(1.875rem + ((1vw - 3.2px) * 2.5));
+        font-size: calc(1.875rem + ((1vw - 3.2px) * 1.875));
         min-height: 0vw;
     }
 
